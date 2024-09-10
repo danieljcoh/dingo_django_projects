@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import Http404, HttpResponse
+from django.http import Http404, HttpResponse, HttpResponseRedirect, HttpResponseNotFound
 
 # Create your views here.
 
@@ -31,4 +31,4 @@ def specific_game_details(request, game):
             "game": game.title
         })
     else:
-        return HttpResponse("This Game is Not Supported")
+        return HttpResponseNotFound("This Game is Not Supported")
