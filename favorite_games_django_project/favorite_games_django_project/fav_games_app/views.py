@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.urls import reverse
+from django.shortcuts import render, reverse
 from django.http import Http404, HttpResponse, HttpResponseRedirect, HttpResponseNotFound
 
 # Create your views here.
@@ -20,15 +21,27 @@ list_of_fav_games = {
 
 
 def index(request):
+    game_links = []
+    for game in list_of_fav_games.keys():
+        # Reverse to generate URL
+        game_url = reverse('specific_game', args=[game])
+        game_links.append(
+            {"title": list_of_fav_games[game]["title"],
+             "developer": list_of_fav_games[game]["developer"],
+             "url": game_url})
+
     return render(request, "fav_games_app/index.html", {
-        "games": list_of_fav_games
+        "game_links": game_links
     })
 
 
-def specific_game_details(request, game):
-    if game in list_of_fav_games:
+def game_details(request, game):
+    list_of_games = list(list_of_fav_games.keys())
+
+    if game in list_of_games:
         return render(request, "fav_games_app/game.html", {
-            "game": game.title
+            "game_title": list_of_fav_games[game]["title"],
+            "game_developer": list_of_fav_games[game]["developer"],
         })
     else:
-        return HttpResponseNotFound("This Game is Not Supported")
+        return HttpResponseNotFound(f"<h1>The Game {game} is Not Supported</h1>")
