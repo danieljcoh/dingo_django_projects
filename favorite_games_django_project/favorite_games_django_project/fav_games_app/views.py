@@ -2,8 +2,7 @@ from django.urls import reverse
 from django.shortcuts import render, reverse
 from django.http import Http404, HttpResponse, HttpResponseRedirect, HttpResponseNotFound
 
-# Create your views here.
-
+# TODO: add a "why" section to the list of fav games object
 list_of_fav_games = {
     "jak_and_daxter": {
         "title": "Jak and Daxter",
@@ -16,6 +15,14 @@ list_of_fav_games = {
     "rachet_and_clank": {
         "title": "Rachet and Clank",
         "developer": "Insomniac Games"
+    },
+    "helldivers": {
+        "title": "Helldivers 2",
+        "developer": "Arrowhead"
+    },
+    "ghost_tsushima": {
+        "title": "Ghost of Tsushima",
+        "developer": None
     }
 }
 
