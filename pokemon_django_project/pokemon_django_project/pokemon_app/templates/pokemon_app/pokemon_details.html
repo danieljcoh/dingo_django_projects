@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ pokemon_name }}{% endblock %}
+
+{% block content %}
+
+{% include "includes/header.html" %}
+    <h1>{{ pokemon_name }}</h1>
+    <h3>{{ pokemon_type }}</h3>
+    <h3>{{ pokemon_description }}</h3>
+{% endblock %}
