@@ -1,14 +1,27 @@
 {% extends "base.html" %}
+{% load static %}
 
-{% block title %} Pokemans {% endblock %}
+{% block css_files%}
+    <link rel="stylesheet" href="{% static "pokemon_app/index.css" %}">
+    <link rel="stylesheet" href="{% static "pokemon_app/includes/header.css" %}">
+{% endblock %}
+
+
+{% block title %} My Pokemon Team {% endblock %}
 
 {% block content %}
+
+{% include "includes/header.html" %}
+
 <h1>My Ultimate Pokemon Team</h1>
-<ul>
-    {% for key, pokemon in pokemon_list.items %}
-        <li>ID: {{ key }} - Name: <a href="{% url "pokemon_details" pokemon_id=key %}">{{ pokemon.name }}</a></li>
-    {% endfor %}
-</ul>
+
+<div>
+    <ul>
+        {% for key, pokemon in pokemon_list.items %}
+            <li><a href="{% url "pokemon_details" pokemon_id=key %}">{{ pokemon.name }}</a></li>
+        {% endfor %}
+    </ul>    
+</div>
 
 
 {% endblock %}

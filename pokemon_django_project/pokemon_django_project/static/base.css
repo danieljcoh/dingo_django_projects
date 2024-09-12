@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html {
+    font-family: "Press Start 2P", system-ui;
+}
+
+body {
+    background-color: #171717;
+    margin: 0;
+    padding: 0;
+}
