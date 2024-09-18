@@ -10,8 +10,10 @@
 
 {% block content %}
     {% include "includes/header.html" %}
-    <img src="{% static {{pokemon_image}} %}">
-    <h1>{{ pokemon_name }}</h1>
-    <h3>{{ pokemon_type }}</h3>
-    <h3>{{ pokemon_description }}</h3>
+    <div>
+        {% comment %} <img src="{% static {{pokemon_image}} %}"> {% endcomment %}
+        <h1>{{ pokemon_name }}</h1>
+        <h3>{{ pokemon_type }}</h3>
+        <h4>{{ pokemon_description }}</h4>
+    </div>
 {% endblock %}

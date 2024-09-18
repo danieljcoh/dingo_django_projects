@@ -102,7 +102,7 @@ def pokemon_details(request, pokemon_id):
         specific_pokemon_name = pokemon_list[specific_pokemon_id]["name"]
         specific_pokemon_type = pokemon_list[specific_pokemon_id]["type"]
         specific_pokemon_description = pokemon_list[specific_pokemon_id]["description"]
-        specific_pokemon_image = pokemon_list[specific_pokemon_id]["image_location"]
+        # specific_pokemon_image = pokemon_list[specific_pokemon_id]["image_location"]
     except:
         return HttpResponseNotFound("<h1>Pokemon not found!</h1>")
 
@@ -110,5 +110,5 @@ def pokemon_details(request, pokemon_id):
         "pokemon_name": specific_pokemon_name,
         "pokemon_type": specific_pokemon_type,
         "pokemon_description": specific_pokemon_description,
-        "pokemon_image": specific_pokemon_image
+        # "pokemon_image": specific_pokemon_image
     })

@@ -1,3 +1,26 @@
 body {
-    color: white;
+    color: black;
 }
+
+div {
+    background-color: #ffdeb2;
+    border: 1px solid red;
+    border-radius: 20px;
+    padding: 40px 20px;
+
+    margin: 10vh auto;
+    width: 60%;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+div h4 {
+    font-size: .7em;
+    line-height: 1.6;
+    background-color: #d1b898;
+    padding: 10px 10px;
+    border-radius: 15px;
