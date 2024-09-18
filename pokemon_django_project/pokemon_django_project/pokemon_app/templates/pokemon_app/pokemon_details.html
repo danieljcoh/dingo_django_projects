@@ -11,7 +11,7 @@
 {% block content %}
     {% include "includes/header.html" %}
     <div>
-        {% comment %} <img src="{% static {{pokemon_image}} %}"> {% endcomment %}
+        <img src="{% static pokemon_image %}">
         <h1>{{ pokemon_name }}</h1>
         <h3>{{ pokemon_type }}</h3>
         <h4>{{ pokemon_description }}</h4>

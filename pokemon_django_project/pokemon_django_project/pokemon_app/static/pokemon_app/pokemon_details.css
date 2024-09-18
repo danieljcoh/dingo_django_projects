@@ -8,7 +8,7 @@ div {
     border-radius: 20px;
     padding: 40px 20px;
 
-    margin: 10vh auto;
+    margin: 5vh auto;
     width: 60%;
     text-align: center;
 
@@ -18,9 +18,21 @@ div {
     flex-direction: column;
 }
 
+img {
+    width: 20em;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+div h3 {
+    line-height: 1.6;
+
+}
+
 div h4 {
     font-size: .7em;
     line-height: 1.6;
     background-color: #d1b898;
     padding: 10px 10px;
     border-radius: 15px;
+}
